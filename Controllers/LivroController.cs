@@ -25,7 +25,7 @@ namespace Biblioteca.Controllers
                 livroService.Atualizar(l);
             }
 
-            return RedirectToAction("Listagem");
+            return RedirectToAction("Listagem","Livro");
         }
 
         public IActionResult Listagem(string tipoFiltro, string filtro)

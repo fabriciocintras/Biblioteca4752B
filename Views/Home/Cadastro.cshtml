@@ -1,0 +1,31 @@
+@model Usuario
+@{     ViewData["Title"] = "Login"; }
+
+ 
+       <div>
+            <form asp-action="Cadastro" method="POST">
+            <h2>Cadastrar Usuario</h>
+            <p>
+                <input type="text" asp-for="Nome" placeholder="Nome" size="50">
+            </p>
+            <p>
+                <input type="text" asp-for="Login" placeholder="Login" size="50">
+            </p>
+             <p>
+                <input type="text" asp-for="Senha" placeholder="Senha" size="50">
+            </p>
+            <p>         
+            <label asp-for="Tipo">Tipo de conta:</label>         
+                <select asp-for="Tipo" id="">
+                <option value="0">ADMINISTRADOR</option>
+                <option value="1">COLABORADOR</option>
+            </select>     
+            </p>  
+
+            <p>
+                <input type="submit" value="CADASTRAR" >
+            </p>
+             <p>@ViewBag.Mensagem</p>
+            </form>
+        </div>
+© 2020 GitHub, Inc.

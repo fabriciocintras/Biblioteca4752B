@@ -1,0 +1,35 @@
+@model Usuario
+@{
+ViewData["Title"]="Editar usuario";
+}
+<div>
+        <div>
+    <h2>Editar Usuario</h2> 
+    <form asp-action="Gravar" method="POST">      
+        <p> 
+            <input type="hidden" asp-for="Id">        
+            <label asp-for="Nome">Nome:</label>         
+            <input asp-for="Nome" />     
+        </p>     
+        <p>         
+            <label asp-for="Login">Login:</label>         
+            <input asp-for="Login" />     
+        </p>     
+        <p>         
+            <label asp-for="Senha">Senha:</label>         
+            <input asp-for="Senha" type="password"/>     
+        </p> 
+        <p>         
+            <label asp-for="Tipo">Tipo de conta:</label>         
+            <select asp-for="Tipo" id="">
+                <option value="0">ADMINISTRADOR</option>
+                <option value="1">COLABORADOR</option>
+            </select>    
+        </p>     
+        <p>         
+            <input type="submit" value="Cadastrar" />     
+        </p> 
+        <p id="">@ViewBag.Mensagem</p>
+    </form> 
+    </div>
+    </div>
